@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DOM Checkpoint</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="domStyle.css" />
+  </head>
+  <body>
+    <header>
+      <!-- The navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Part -->
+    <main>
+      <!-- Shopping Card Intro : Slide -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+          ></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://images.theconversation.com/files/351878/original/file-20200810-22-przb4a.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C5760%2C2880&q=45&auto=format&w=1356&h=668&fit=crop"
+              class="d-block w-100"
+              alt="slide1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F02.2F12.2Fe27f2db0-73a0-40e3-821f-82a78566c891.2Ejpeg/1120x630/background-color/ffffff/quality/90/de-a-a-e-letiquette-ecolo-va-faire-son-entree-au-rayon-vetements.jpg"
+              class="d-block w-100"
+              alt="slide2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRU-R5ImYymGrnQtaB0mEXyTWky0pI_DLt3g&usqp=CAU"
+              class="d-block w-100"
+              alt="slide3"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+
+      <!-- The shopping Card part -->
+      <section class="shopping-card">
+        <div class="total-price-container">
+          <span>Total Price :</span>
+          <span class="total-price"> 0 </span>
+          <span>$</span>
+        </div>
+        <div class="cards-container">
+          <!-- Product 1 -->
+          <div class="card" style="width: 15rem">
+            <img
+              src="https://i.pinimg.com/474x/7b/b6/c1/7bb6c1978935efb6811f9d8ad7d21efd.jpg"
+              class="card-img-top"
+              alt="baskets"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Baskets</h5>
+              <p class="card-text">This is a basket.</p>
+              <span class="unit-price">100</span>
+              <span> $</span>
+            </div>
+            <div class="card-body">
+              <i class="fas fa-plus-circle plus-btn"></i>
+              <span class="qute"> 0 </span>
+              <i class="fas fa-minus-circle minus-btn"></i>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-heart"></i>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="card" style="width: 15rem">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9hTBxBo4cRjz0uktWaJVAQSFuJrx9pG8gmQ&usqp=CAU"
+              class="card-img-top"
+              alt="socks"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Socks</h5>
+              <p class="card-text">This is a socks.</p>
+              <span class="unit-price">20</span>
+              <span> $</span>
+            </div>
+            <div class="card-body">
+              <i class="fas fa-plus-circle plus-btn"></i>
+              <span class="qute"> 0 </span>
+              <i class="fas fa-minus-circle minus-btn"></i>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-heart"></i>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="card" style="width: 15rem">
+            <img
+              src="https://i.pinimg.com/564x/20/bd/e7/20bde75e5c571425e0836ce30abd16fb.jpg"
+              class="card-img-top"
+              alt="bag"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Bag</h5>
+              <p class="card-text">This is a bag.</p>
+              <span class="unit-price">50</span>
+              <span> $</span>
+            </div>
+            <div class="card-body">
+              <i class="fas fa-plus-circle plus-btn"></i>
+              <span class="qute"> 0 </span>
+              <i class="fas fa-minus-circle minus-btn"></i>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-heart"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Part -->
+    <footer>
+      <section>
+        <div class="footer">
+          <h1>Welcome in our online shopping card</h1>
+          <h2>You can contact us over the phone,Gmail or Facebook</h2>
+          <p>Phone:58254897</p>
+          <p>Gmail:el@gmail.com</p>
+          <p>Facebook:el@otlook.com</p>
+        </div>
+      </section>
+    </footer>
+    <!-- Bootstrap Javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
